@@ -1,14 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AboutPage from "./pages/About";
-import { HomePage } from "./pages/Home";
-
+import MarketplacePage from "./pages/Marketplace";
+import HomePage from "./pages/Home";
+import CreatorPage from './pages/Creator';
+import CommunityPage from './pages/Community/indes';
 export const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/about" element={<AboutPage />}></Route>
+        <Route path="/marketplace" element={<MarketplacePage />}></Route>
+        <Route path="/creator" element={<CreatorPage />}></Route>
+        <Route path="/community" element={<CommunityPage />}></Route>
       </Routes>
     </Router>
   );
